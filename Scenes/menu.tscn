@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/menu.png" type="Texture" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.0667114
+margin_top = -1.78381
+margin_right = -0.0667114
+margin_bottom = -1.78381
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 320.0
+margin_top = 426.0
+margin_right = 680.0
+margin_bottom = 522.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.41, 305.784 )
+scale = Vector2( 0.750595, 0.786696 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -683, -384 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
